@@ -1,0 +1,251 @@
+.update__news--list {
+    min-height: 520px;
+  }
+  .update__news--item {
+    border-top: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 添加间距 */
+    margin-top: 20px; 
+    /* 增加高度宽度 */
+    height: 250px;
+    width: 900px;
+    display: flex;  
+    justify-content: space-between; /* 水平方向上的对齐方式 */  
+    align-items: center; /* 垂直方向上的对齐方式 */ 
+    box-shadow:
+    1.5px 1px 0.5px rgba(0, 0, 0, 0.035),
+    4.1px 2.6px 1.4px rgba(0, 0, 0, 0.05),
+    9.9px 6.3px 3.3px rgba(0, 0, 0, 0.065),
+    33px 21px 11px rgba(0, 0, 0, 0.1);  /* 阴影 */
+  }
+  @media screen and (max-width: 2880px) {  
+    .update__news--item {
+      border-top: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.7);
+      /* 添加间距 */
+      margin-top: 20px; 
+      /* 增加高度宽度 */
+      height: 250px;
+      width: 800px;
+      display: flex;  
+      justify-content: space-between; /* 水平方向上的对齐方式 */  
+      align-items: center; /* 垂直方向上的对齐方式 */ 
+      box-shadow:
+      1.5px 1px 0.5px rgba(0, 0, 0, 0.035),
+      4.1px 2.6px 1.4px rgba(0, 0, 0, 0.05),
+      9.9px 6.3px 3.3px rgba(0, 0, 0, 0.065),
+      33px 21px 11px rgba(0, 0, 0, 0.1);  /* 阴影 */
+    }
+  }
+  .update__news--item:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+  .update__news--link {
+    /* 增加高度 */
+    height: 250px;
+    padding: min(2vw, 30px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+  }
+  @media screen and (max-width: 768px) {
+    .update__news--list {
+      min-height: unset;
+    }  
+    .update__news--link {
+      gap: max(2.1333333333vw, 10.6666666667px);
+      padding: max(4vw, 20px);
+    }
+  }
+  .update__news--link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: #009dbd;
+    width: 0;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    right: 0;
+    z-index: 1;
+  }
+  .update__news--link:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  .update__news--link:hover .update__news--title {
+    color: #009dbd;
+  }
+  .update__news--link:hover .updata__news--pic {
+    transform: scale(1.2) rotate(10deg);
+  }
+  .update__news--link:hover .update__news--arrow::before {
+    -webkit-animation: arrow 0.4s;
+    animation: arrow 0.4s;
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+    background-color: #009dbd !important;
+  }
+  .update__news--title {
+    color: #000;
+    line-height: 2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-transition: color 0.25s cubic-bezier(0.5, 1, 0.89, 1);
+    transition: color 0.25s cubic-bezier(0.5, 1, 0.89, 1);
+    /* width: 500px; */
+    width: 400px;
+  }
+  .updata__news--pic {  
+    /* height: 100%; */
+    height: 250px;
+    width: 300px;
+    overflow: hidden; 
+  }  
+  .lazyLoad{  
+    height: auto;
+    width: auto;
+    /* 设置初始状态 */  
+    transition: transform 0.9s ease; /* 添加过渡效果 */  
+  }  
+
+  .update__news--item:hover .lazyLoad{
+    transform: scale(1.2) rotate(10deg);  
+    /* 实现触碰旋转并且放大 */
+  }
+
+  /* 列表与介绍栏 */
+  .left_right {
+    display: flex; /* 使用 Flexbox 布局 */  
+    justify-content: space-between; /* 子组件之间的空间分布 */ 
+  }
+  .toPage {
+    display: flex;
+    justify-content: space-between;
+  }
+  .toPage_left {
+    margin-left: 300px;
+  }
+  .toPage_right {
+    margin-right: 100px;
+  }
+  .right_introduce {
+    margin-left: 50px;
+    width: 300px;
+    height: 500px;
+  }
+  .right_introduce__title {
+    margin-left: 45px;
+  }
+  .ri_introduce_content {
+    padding-top: 20px;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color:  black;
+    /* 阴影 */
+    box-shadow:
+    1.5px 1px 0.5px rgba(0, 0, 0, 0.035),
+    4.1px 2.6px 1.4px rgba(0, 0, 0, 0.05),
+    9.9px 6.3px 3.3px rgba(0, 0, 0, 0.065),
+    33px 21px 11px rgba(0, 0, 0, 0.1);
+  }
+
+  .ri_profile {
+    margin-top: 20px;
+    width: 180px;
+    height: 180px;
+    background-color: #a0fff9;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; 
+  }
+  .ri_profile:hover .ri_image{
+    transform:  rotate(-20deg);  
+    /* 实现触碰旋转并且放大 */
+  }
+  .ri_image {
+    background-color: #a0fff9;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; 
+    height: 98%;
+    width: 98%;
+    border-width: 6px;
+    object-fit: cover;
+    transition: transform 0.9s ease;
+  }
+  .ri_name {
+    /* 水平居中 */
+    font-family: Helvetica;
+    font-style: normal;
+    text-align: center;    
+    margin: 10px auto auto auto;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .ri_introduce {
+    /* 水平居中  */
+    margin: 20px 15px auto 15px;
+  }
+  .ri_icon {
+    margin: 20px auto auto auto;
+    width: 50%;
+  }
+  /* 字体样式 */
+  .rt_type {
+    font-family: Rubik,Avenir,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    --text-normal: #bebebe;
+    --test-Tangkeke: #a0fff9;
+    color: var(--text-normal);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .horizontal-type {
+    color: #000;
+  }
+  .horizontal-container {
+    display: flex;  
+    justify-content: center; /* 水平居中 */  
+    align-items: center; /* 垂直居中 */  
+  }
+  .horizontal-list {  
+    display: flex; /* 使<li>元素水平分布 */  
+    list-style-type: none; /* 移除默认的列表样式 */  
+    padding: 0; /* 移除默认的padding */  
+  }  
+    
+  .horizontal-list li {  
+    display: flex; /* 使<span>和<p>垂直分布 */  
+    flex-direction: column; /* 垂直方向排列子元素 */  
+    align-items: center; /* 垂直居中对齐子元素 */  
+    margin-right: 10px; /* 每个<li>之间的间距 */  
+  }  
+    
+  .horizontal-list li:last-child {  
+    margin-right: 0; /* 移除最后一个<li>的右边距 */  
+  }  
+    
+  .horizontal-list span,  
+  .horizontal-list p {  
+    margin: 0; /* 移除默认的margin */  
+  }
+  @media screen and (max-width: 2880px) {
+    
+  }

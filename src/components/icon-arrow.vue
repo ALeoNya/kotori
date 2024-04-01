@@ -1,0 +1,14 @@
+<!-- <template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="64.32" viewBox="0 0 120 64.32">
+        <defs>
+            <style>
+            .cls-1 {
+                fill: #fff;
+                fill-rule: evenodd;
+            }
+            </style>
+        </defs>
+        <path id="icon-arrow-large.svg" class="cls-1" d="M560,1007.84L680,1040h0l-120,32.16v-4.14L664.555,1040,560,1011.98v-4.14Z" transform="translate(-560 -1007.84)"/>
+    </svg>
+</template> -->
+<template></template>
