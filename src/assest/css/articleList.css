@@ -1,3 +1,4 @@
+
 .update__news--list {
     min-height: 520px;
   }
@@ -167,7 +168,7 @@
     margin-top: 20px;
     width: 180px;
     height: 180px;
-    background-color: #a0fff9;
+    background-color: #009dbd;
     border-radius: 9999px;
     margin-left: auto;
     margin-right: auto;
@@ -178,7 +179,7 @@
     /* 实现触碰旋转并且放大 */
   }
   .ri_image {
-    background-color: #a0fff9;
+    background-color: rgb(159, 157, 157);
     border-radius: 9999px;
     margin-left: auto;
     margin-right: auto;

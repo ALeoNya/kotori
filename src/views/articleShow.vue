@@ -167,11 +167,11 @@
 
 <!-- Background -->
 <div class="fixbg" :id="pageid">  
-    <div class="cmn__triangle">
-        <div class="cmn__triangle--item -blue -top"></div>
-        <div class="cmn__triangle--item -gray -bottom"></div>
-    </div>
+  <div class="cmn__triangle">
+      <div class="cmn__triangle--item -blue -top"></div>
+      <div class="cmn__triangle--item -gray -bottom"></div>
   </div>
+</div>
 </template>
 <script lang="ts" setup>
 import { allArticle } from '@/api/api';

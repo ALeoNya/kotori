@@ -1,5 +1,6 @@
 <template>
   <header class="header js-header">
+  <link rel="stylesheet" href="../assest//css//common.css" type="text/css">
   <div class="header__inner">
     <div class="header__onbg">
       <div class="headerNavWrap">
@@ -89,6 +90,7 @@
     <div class="header__navBtnWrap">
       <!-- Menu -->
       <a href="javascript:;" class="header__navBtn js-menu">
+        <!-- 两条横线的动画 -->
         <div class="header__navBtn__lineWrap">
           <span class="header__navBtn--line"></span>
           <span class="header__navBtn--line"></span>
@@ -192,9 +194,10 @@
           <div class="movie__triangle--item -left"></div>
         </div>
         <div class="movie__play">
+          <!-- 视频标签 -->
           <a href="javascript:;" class="movie__play--link js-modalOpen js-youtubePlay js-youtubeControll" data-modal="youtubeModal" data-ytid="JLPZ9uzyas0">
             <span class="movie__play--btn">
-              <span class="u-font-futura">PLAY</span>
+              <span class="u-font-futura">VIEW</span>
               <span class="icon-arrow-large"></span>
             </span>
           </a>
@@ -251,13 +254,13 @@
                 </div>
               </li>
               </ul>
-              <!-- 右边栏实现移动到文章列表触发位置不随滚动条运动，到底部位置 -->
+              <!-- 右边栏绝对定位 -->
               <div class="right_introduce">
                 <div class="ri_introduce_content">
                   <div class="ri_profile">
                     <img class="ri_image" src="http://149.88.95.15:9000/image/Liyuu.png" alt="">
                   </div> 
-                    <div><h2 class="ri_name">anoki</h2></div>
+                    <div><h2 class="ri_name">Anoki</h2></div>
                     <div class="ri_introduce"><p class="rt_type">你指尖跃动的电光~是我此生不变的信仰 only my reilgun。</p></div>
                     <div class="ri_icon">
                     <div class="horizontal-container">
@@ -342,7 +345,7 @@
   </footer>
   <!--./footer-->
 
-  <!-- 背景x1 -->
+  <!-- 绝对背景 -->
   <div class="fixbg" :id="pageid">  
     <div class="cmn__triangle">
         <div class="cmn__triangle--item -blue -top"></div>
@@ -453,7 +456,7 @@ import { sendPageNum } from '../api/api'
 let pageNum = ref(1)
 const sendPageInfo = () => {
   sendPageNum(pageNum.value).then(res=> {
-    // 不为null    
+    // 不为null     
     if(res.data.data==null) {
       pageNum.value = pageNum.value - 1
       console.log(pageNum.value)
@@ -496,13 +499,11 @@ const getBaseImageUrl = (imgName:string) => {
 import { useRouter } from 'vue-router'
 const router = useRouter(); 
 const toNextPage = (id:number) => {
-  // console.log(id)
   router.push({ name: 'articleShow', params: { id:id } });  
-  // console.log(id)
 }
 </script>
 
 <style scoped>
  @import '../assest/css/common.css';
- @import '../assest/css/articleList.css'
+ @import '../assest/css/articleList.css';
 </style>

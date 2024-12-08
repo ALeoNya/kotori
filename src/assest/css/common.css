@@ -2415,7 +2415,7 @@ a .icon-blank::before {
   gap: min(3.3333333333vw, 50px);
   mix-blend-mode: difference;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media screen and (min-width: 769px) {
@@ -2446,6 +2446,7 @@ a .icon-blank::before {
   text-transform: uppercase;
   line-height: 1;
   color: #FFF;
+  /* color: rgb(255, 241, 241); */
 }
 
 .movie__title>span::before,
@@ -3764,6 +3765,7 @@ a .icon-blank::before {
   top: 0;
   z-index: -1;
   pointer-events: none;
+  background-color: white;
 }
 
 /**
